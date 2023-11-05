@@ -8,13 +8,19 @@ Content-Type: application/json
 
 {
   "title": "Картошка",
-  "description": "Лучшие помидоры на рынке"
+  "description": "Лучшая картофелина на рынке"
 }
 
 ###
 
 # получение продуктов
 GET {{baseUrl}}/products/
+Content-Type: application/json
+
+###
+
+# получение продуктов постранично (сделал размер страницы 1)
+GET {{baseUrl}}/products/?page=1
 Content-Type: application/json
 
 ###
@@ -36,7 +42,7 @@ Content-Type: application/json
 ###
 
 # поиск продуктов по названию и описанию
-GET {{baseUrl}}/products/?search=Картошка
+GET {{baseUrl}}/products/?search=картофелина
 Content-Type: application/json
 
 ###
@@ -87,3 +93,10 @@ Content-Type: application/json
 # поиск складов, где есть определенный продукт
 GET {{baseUrl}}/stocks/?products=2
 Content-Type: application/json
+
+###
+
+# получение продуктов постранично (сделал размер страницы 1)
+GET {{baseUrl}}/stocks/?page=2
+Content-Type: application/json
+
