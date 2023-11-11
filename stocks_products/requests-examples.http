@@ -52,15 +52,15 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "мой1 адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
   "positions": [
     {
-      "product": 2,
+      "product": 3,
       "quantity": 250,
       "price": 120.50
     },
     {
-      "product": 3,
+      "product": 4,
       "quantity": 100,
       "price": 180
     }
@@ -91,7 +91,7 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?products=4
 Content-Type: application/json
 
 ###
