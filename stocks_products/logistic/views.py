@@ -22,5 +22,6 @@ class StockViewSet(ModelViewSet):
 
 
 def test_view(request):
-    return HttpResponse('Hello!')
+    return HttpResponse('Hel4124lo!')
+
 
