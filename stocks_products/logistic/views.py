@@ -20,5 +20,6 @@ class StockViewSet(ModelViewSet):
     # при необходимости добавьте параметры фильтрации
     filterset_fields = ['products', ]
 
+
 def test_view(request):
     return HttpResponse('Hello!')
