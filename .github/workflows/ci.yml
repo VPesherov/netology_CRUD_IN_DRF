@@ -39,6 +39,6 @@ jobs:
         run: flake8 stocks_products/stocks_products --exclude=settings.py
 
       - name: Тестирование
-        run: python stocks_products/manage.py test
+        run: cd stocks_products | python3 manage.py test
         env:
           TEST: "test"
