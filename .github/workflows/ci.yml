@@ -30,7 +30,7 @@ jobs:
       - name: Установка python
         uses: actions/setup-python@v3
         with:
-          python-versions: 3.9
+          python-version: '3.9'
 	   
 
 
