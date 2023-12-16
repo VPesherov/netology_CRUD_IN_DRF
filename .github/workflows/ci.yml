@@ -32,6 +32,8 @@ jobs:
         with:
           python-version: '3.8'
 
+      - name: Установка зависимостей
+        run: pip install -r stocks_products/requirements.txt
 
 
 
