@@ -38,3 +38,7 @@ jobs:
       - name: Линтинг
         run: flake8 stocks_products/stocks_products --exclude=settings.py
 
+      - name: Тестирование
+        run: python stocks_products/manage.py test
+        env:
+          TEST: "test"
