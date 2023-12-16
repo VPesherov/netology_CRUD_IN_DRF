@@ -27,13 +27,7 @@ jobs:
       - name: Проверка репозитория на наличие изменений
         uses: actions/checkout@v3
 
-      - name: Установка python
-      - uses: actions/setup-python
-        with:
-          python-versions: 3.9
 
-      - name: Установка зависимостей
-        run: pip install -r stocks_products/requirements.txt
 
 
 
