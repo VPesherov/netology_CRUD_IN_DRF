@@ -1,0 +1,47 @@
+name: Автоматизация
+
+on:
+  push:
+    - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-22.04
+    env:
+      TEST: "test"
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_DB: "netology_stocks_products"
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: "123"
+        ports:
+          - 5432:5432
+        options:
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - name: Проверка репозитория на наличие изменений
+        uses: actions/checkout@v3
+
+      - name: Установка python
+        uses: actions/setup-python
+        with:
+          python-versions: 3.9
+
+      - name: Установка зависимостей
+        run: pip install -r requirements.txt
+
+      - name: Линтинг
+        run: flake8 stocks_products
+
+      - name: Тестирование
+        run: python manage.py test
+        env:
+          TEST: "test"
+
+
+
