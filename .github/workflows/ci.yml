@@ -30,7 +30,7 @@ jobs:
       - name: Установка python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.8'
+          python-version: '3.9'
 
       - name: Установка зависимостей
         run: pip install -r stocks_products/requirements.txt
