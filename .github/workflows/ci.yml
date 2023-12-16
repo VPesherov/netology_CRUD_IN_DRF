@@ -49,5 +49,5 @@ jobs:
           host: "79.174.82.135"
           username: "fword"
           password: "123"
-          script: expect /home/fword/netology_CRUD_IN_/deploy.exp
+          script: expect /home/fword/netology_CRUD_IN_DRF/deploy.exp
 
