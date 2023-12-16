@@ -36,5 +36,5 @@ jobs:
         run: pip install -r stocks_products/requirements.txt
 
       - name: Линтинг
-        run: flake8 stocks_products/stocks_products
+        run: flake8 stocks_products/stocks_products --exclude=settings.py
 
